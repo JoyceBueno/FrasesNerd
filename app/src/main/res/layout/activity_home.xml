@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/tanjirou"
+    tools:context=".HomeActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linear_custom"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_perfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/perfil"
+        app:civ_border_color="@color/yelow"
+        app:civ_border_width="2dp"
+        android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/yelow"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:alpha="0.7"
+        android:layout_marginTop="200dp">
+        <TextView
+            android:id="@+id/textFraseGerada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:text="Clique no botão para gerar a frase"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginTop="50dp"
+        android:text="Gerar Frases"
+        android:textSize="18sp"
+        android:textColor="@color/yelow"
+        android:onClick="gerarNovaFrase"
+        android:layout_gravity="center_horizontal"/>
+
+
+
+
+</LinearLayout>
